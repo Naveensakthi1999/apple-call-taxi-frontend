@@ -1,0 +1,317 @@
+
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+  
+.table-fixed {
+  /* height    : 640px; */
+  overflow-y: auto;
+}
+.example{
+  text-align: left;
+}
+
+.fixed-header {
+background-color: #5E35B1;
+  position        : sticky;
+  top             : -1px;
+  color:white;
+}
+
+.fixed-header th{
+  font-weight: 400;
+}
+table th,table td{
+  border-right: 1px solid white;
+}
+/* ************************************** Table pagination  ****************************************************** */
+.css-bd9sfl-MuiTablePagination-selectLabel,
+.css-1ts1p8p-MuiTablePagination-displayedRows {
+    margin: 0px !important;
+}
+
+.custom-file-label {
+  /* padding:.1175rem .75rem !important; */
+  padding:.995rem !important;
+  height: calc(2.7em + .75rem + 2px);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.custom-file-label::after {
+  padding:.995rem !important;
+  height: calc(2.5em + .75rem + 2px);
+  border-radius:0  12px 12px 0;
+  cursor: pointer;
+}
+
+
+
+/* TAP Colors Running  */
+.css-qps8y9-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  color:#5E35B1 !important;
+}
+.css-1i5jzbk-MuiTabs-indicator{
+  background-color: #5E35B1;
+}
+/* Border none into whole pages */
+button:focus{
+  outline: none !important;
+}
+
+/************************************* card *************************************/
+/* width:  294px;
+  height: 170px; */
+.mycard {
+  width: 300px;
+  height: 150px;
+  /* padding:20px; */
+  background: #07182E;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.9);
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.mycard h2 {
+  z-index: 1;
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.mycard .val{
+  z-index: 1;
+  color: white;
+  font-size: 1.7rem;
+}
+.mycard .val .muiicon{
+  z-index: 1;
+  color: white;
+  font-size: 2rem;
+}
+
+.mycard::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 400%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mycard::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+.mycard:hover:before {
+  background-image: linear-gradient(180deg, rgb(0, 255, 13), rgb(6, 255, 238));
+  animation: rotBGimg 3.5s linear infinite;
+  cursor: pointer;
+}
+.mycard:hover{
+  cursor: pointer;
+  user-select: none;
+}
+.css-1qt1idk-MuiTypography-root{
+  padding:2px !important;
+  margin:0px !important;
+}
+
+.dashboard-count:hover {
+    color: unset;
+    text-decoration: none;
+}
+
+.big-card-running-cars:before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%);
+  border-radius: 50%;
+  top: -125px;
+  right: -15px;
+  opacity: 0.5;
+}
+
+.big-card-running-cars:after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%);
+  border-radius: 50%;
+  top: -85px;
+  right: -95px;
+}
+
+.big-card-tommorow-calls:before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: #bb62d4;
+  border-radius: 50%;
+  top: -125px;
+  right: -15px;
+  opacity: 0.5;
+}
+
+.big-card-tommorow-calls:after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: #e563ad;
+  border-radius: 50%;
+  top: -85px;
+  right: -95px;
+}
+
+.big-card-total-booking:before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: #ab90d1;
+  border-radius: 50%;
+  top: -125px;
+  right: -15px;
+  opacity: 0.5;
+}
+
+.big-card-total-booking:after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: #a78dcf;
+  border-radius: 50%;
+  top: -85px;
+  right: -95px;
+}
+
+.small-card-fc-incurance:before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(140.9deg, #f2ff2f -14.02%, rgba(144, 202, 249, 0) 77.58%);
+  border-radius: 50%;
+  top: -160px;
+  right: -130px;
+}
+
+.small-card-fc-incurance:after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(210.04deg, #f2ff2f -50.94%, rgba(144, 202, 249, 0) 83.49%);
+  border-radius: 50%;
+  top: -30px;
+  right: -180px;
+}
+
+.small-card-cancellation:before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(140.9deg, #8b1a1a -14.02%, rgba(144, 202, 249, 0) 77.58%);
+  border-radius: 50%;
+  top: -160px;
+  right: -130px;
+}
+
+.small-card-cancellation:after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(210.04deg, #8b1a1a -50.94%, rgba(144, 202, 249, 0) 83.49%);
+  border-radius: 50%;
+  top: -30px;
+  right: -180px;
+}
+
+.small-card-inactive:before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(140.9deg, #ffb205 -14.02%, rgba(144, 202, 249, 0) 77.58%);
+  border-radius: 50%;
+  top: -160px;
+  right: -130px;
+}
+
+.small-card-inactive:after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(210.04deg, #ffb205 -50.94%, rgba(144, 202, 249, 0) 83.49%);
+  border-radius: 50%;
+  top: -30px;
+  right: -180px;
+}
+
+.swal2-container {
+  z-index: 9999;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.inactive-popup-list{
+  max-width: 700px;
+}
+
+.css-iwph65-MuiPaper-root-MuiDialog-paper{
+  max-width: 800px;
+}
