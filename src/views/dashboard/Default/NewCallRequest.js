@@ -60,7 +60,6 @@ function NewCallRequest({ noneheading }) {
     axios.get(`${API_BASE_URL}/managedriver/managedriver_booking_autocomplete?search=${value}&car_id=${values.car_id}`)
       .then((result) => {
         if (result.data.Status) {
-          console.log(result.data.Result);
           setDriverOptions(result.data.Result);
         } else {
           alert(result.data.Error);
@@ -206,7 +205,6 @@ const validateForm = (values) => {
   } 
   return errors;
 };
-
 useEffect(() => {
   axios.get(`${API_BASE_URL}/availablestatus/availablecar_status`)
   .then((result) => {
@@ -219,7 +217,9 @@ useEffect(() => {
   .catch((err) => console.log(err));
 }, []);
 
-  return (
+console.log(values.pickup_time);
+
+return (
     <MainCard title={noneheading}>
       {/* INPUT FILED */}
       <form onSubmit={handleSubmit}>

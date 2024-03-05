@@ -35,7 +35,7 @@ function EditCallRequest({ noneheading }) {
     to_loaction: '',
     land_mark: '',
     pickup_date: new Date().toLocaleDateString(),
-    pickup_time: new Date(),
+    pickup_time: new Date().toLocaleDateString(),
     car_id: '',
     no_seats: '',
     driver_id: '',
@@ -230,15 +230,16 @@ useEffect(()=>{
 
 }, [pickupTimeNormal])
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    if (values.booking_id === '' || values.mobile === '' || values.cust_name === '' || values.from_loaction === ''|| values.to_loaction === ''|| values.land_mark === '' || values.pickup_date === '' || values.pickup_time === '' || values.car_id === '' || values.no_seats === '' || values.driver_id === '' || values.edit_by === '') {
-     withReactContent(Swal)
-       .fire({
-         title: 'Please enter a required field.'
-       });
-   } else {
+const handleSubmit = (e) => {
+  e.preventDefault()
+  
+  if (values.booking_id === '' || values.mobile === '' || values.cust_name === '' || values.from_loaction === ''|| values.to_loaction === ''|| values.land_mark === '' || values.pickup_date === '' || values.pickup_time === '' || values.car_id === '' || values.no_seats === '' || values.driver_id === '' || values.edit_by === '') {
+    withReactContent(Swal)
+    .fire({
+      title: 'Please enter a required field.'
+    });
+  } else {
+     console.log(values.pickup_time);
     axios.put(`${API_BASE_URL}/booking/update_booking/`+id, {values})
     .then(result => {
         if(result.data.Status) {
@@ -255,7 +256,6 @@ const handleReset = (e) => {
  e.preventDefault();
  navigate('/Booking/ManageBooking');
 }
-console.log(values);
   return (
     <MainCard title={noneheading}>
       {/* INPUT FILED */}
