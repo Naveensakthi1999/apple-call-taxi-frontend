@@ -190,7 +190,11 @@ function ManageBooking() {
                         color = 'green';
                     }
                 } else if (moment(pickupDateTime).format("DD-MM-YYYY") >= moment(tomorrowDate).format("DD-MM-YYYY") && item.status === 'Waiting') {
+                  if(moment(pickupDateTime).format("DD-MM-YYYY") === moment(tomorrowDate).format("DD-MM-YYYY") && item.status === 'Waiting'){
                     color = 'blue';
+                  } else {
+                    color = '#fc9700';
+                  }
                 } else if (currentDate >= beforePickup && item.status === 'Waiting') {
                     color = 'red';
                 }

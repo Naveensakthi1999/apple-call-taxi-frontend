@@ -272,7 +272,7 @@ const handleReset = (e) => {
               className="w-100"
               onInputChange={customerhandleInputChange}
               renderInput={(params) => (
-                <TextField {...params} label="Mobile" type='Number' variant="outlined" id="outlined-read-only-input"
+                <TextField {...params} label="Mobile" type='text' variant="outlined" id="outlined-read-only-input"
                 />
               )}
               inputValue={customerOptionsValue}

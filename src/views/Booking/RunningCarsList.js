@@ -110,7 +110,7 @@ function RunningCarsList() {
         />
 
           {/* TABLE DATA */}
-          <div className=" example">
+          <div className=" example" style={{overflowX:'auto'}}>
             <table className="table table-hover">
               <thead className="fixed-header ">
                 <tr>
@@ -118,6 +118,8 @@ function RunningCarsList() {
                   <th>Booking Id</th>
                   <th>Date & Time</th>
                   <th>Driver</th>
+                  <th>Customer Name</th>
+                  <th>Customer Mobile</th>
                   <th>Car Model</th>
                   <th>Pickup</th>
                   <th>Drop</th>
@@ -165,6 +167,8 @@ function RunningCarsList() {
                   </td>
                   <td>{moment(item.pickup_date).format("DD/MM/YYYY")} @ {moment(item.pickup_time).format("hh:mm A")}</td>
                   <td>{item.driver_name}</td>
+                  <td>{item.cust_name}</td>
+                  <td>{item.mobile}</td>
                   <td>{item.car_name}</td>
                   <td>{item.from_loaction}</td>
                   <td>{item.to_loaction}</td>

@@ -235,7 +235,7 @@ return (
               className="w-100"
               onInputChange={customerhandleInputChange}
               renderInput={(params) => (
-                <TextField {...params} label="Mobile" type='Number'
+                <TextField {...params} label="Mobile" type='text'
                 error={Boolean(errors.mobile)} 
                 variant="outlined" />
               )}
